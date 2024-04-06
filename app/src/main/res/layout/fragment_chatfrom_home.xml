@@ -15,14 +15,15 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_color">
 
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolBarChat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/midnightblue">
+            android:background="@drawable/gradient_color">
 
 
             <ImageView
@@ -61,15 +62,12 @@
                     android:id="@+id/chatUserName"
                     android:fontFamily="@font/nunito_bold"/>
 
-
-
             </LinearLayout>
 
 
 
 
         </androidx.appcompat.widget.Toolbar>
-
 
         <TextView
             android:layout_width="wrap_content"
@@ -94,46 +92,60 @@
             android:layout_marginEnd="10dp"
             android:layout_above="@id/layoutChatbox"
             android:layout_marginBottom="10dp"
+            android:background="@drawable/background_content_bottom"
             />
-
-
-
-
 
         <LinearLayout
             android:id="@+id/layoutChatbox"
             android:layout_alignParentBottom="true"
-
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white"
+            android:background="@drawable/gradient_color"
             android:minHeight="48dp"
             android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/editTextMessage"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
                 android:layout_weight="1"
                 android:text="@={viewModel.message}"
-                android:background="@android:color/transparent"
-                android:hint="Enter Message"
+                android:hint="@string/enter_message"
+                android:textAlignment="center"
                 android:importantForAutofill="no"
                 android:inputType="textMultiLine"
-                android:maxLines="6" />
+                android:maxLines="6"
+                android:background="@drawable/background_chat_input"
+                android:backgroundTint="@color/teal_700"/>
 
-            <Button
+            <FrameLayout
                 android:id="@+id/sendBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:clickable="true"
-                android:text="Send"
-                android:textSize="14sp" />
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10sp"
+                android:background="@drawable/background_chat_input"
+                android:backgroundTint="@color/teal_700"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_send"
+                    app:tint="@color/white"/>
+            </FrameLayout>
         </LinearLayout>
 
 

@@ -2,4 +2,6 @@
     <string name="app_name">Samchat</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_message">Enter Message</string>
+    <string name="send">Send</string>
 </resources>
