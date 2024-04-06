@@ -8,9 +8,8 @@
     android:layout_height="wrap_content">
 
 
-
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="14:00"
         android:layout_weight="1"
@@ -19,25 +18,19 @@
         android:textStyle="italic"
         android:gravity="end"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="8dp"/>
-
-
+        android:layout_marginEnd="10dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:padding="8dp"
             android:text="Hello"
             android:fontFamily="@font/nunito_bold"
-            android:textSize="15sp"
+            android:textSize="18sp"
             android:textColor="@android:color/white"
             android:id="@+id/show_message"
-            android:background="@drawable/rounded_rectangle_primary"/>
-
-
-
-
-
+            android:background="@drawable/background_sent_message"/>
     </LinearLayout>
 
 
